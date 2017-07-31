@@ -81,7 +81,7 @@ vagrant@vagrant-ubuntu-trusty-64:~$ bx login -a api.ng.bluemix.net -u takara@xxx
 
 ## Bluemix IBMコンテナ (Docker) ログイン
 
-この Vagrantfile では Docker-CE を導入していますので、Bluemix CLI のプラグインをインストールするだけでお、BluemixのDocker コンテナを管理できます。
+この Vagrantfile では Docker-CE を導入していますので、Bluemix CLI のプラグインをインストールするだけで、BluemixのDocker コンテナを管理できます。
 
 ~~~
 bx plugin install IBM-Containers -r Bluemix
@@ -123,6 +123,7 @@ Bluemix の Kubernetes クラスターを操作するためのプラグイン
 
 IBM Bluemix Container Service (Docker) の管理のためのプラグイン
 
+上記のプラグインをインストールした後に、リストを表示すると次の様になります。
 
 ~~~
 vagrant@vagrant-ubuntu-trusty-64:~$ bx plugin list
