@@ -6,12 +6,11 @@
 ## このファイルの内容
 
 
-
-プログラム言語のツールのが動作する環境で構築できます。
+以下のプログラム言語やツールが動作する環境が構築できます。
 
 * Bluemix CLI コマンド (bxコマンド)
 * kubectl k8sの管理用コマンド 
-* ruby,php,python,node.js をビルドするために必要なモジュール導入
+* ruby,php,python,node.js をビルドするために必要なaptモジュール導入
 * clpplus を実行するために必要なJRE環境 (clpplusは入っていません)
 * ruby バージョン切り替えとビルドツール rbenv,ruby-build
 * PHP バージョン切り替えとビルドツール phpenv,php-build
