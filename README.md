@@ -73,13 +73,15 @@ Run 'do-release-upgrade' to upgrade to it.
 
 ## Bluemix へのログイン
 
-Bluemix コマンドが、インストールされていますから、すぐにログインできます。
+Bluemix CLIがインストールされるので、すぐに自分のアカウントでBluemixへログインできます。
 
 ~~~
 vagrant@vagrant-ubuntu-trusty-64:~$ bx login -a api.ng.bluemix.net -u takara@xxxxx.com -p '*******' -s dev -c account_id
 ~~~
 
 ## Bluemix IBMコンテナ (Docker) ログイン
+
+この Vagrantfile では Docker-CE を導入していますので、Bluemix CLI のプラグインをインストールするだけでお、BluemixのDocker コンテナを管理できます。
 
 ~~~
 bx plugin install IBM-Containers -r Bluemix
