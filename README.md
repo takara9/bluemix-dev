@@ -5,15 +5,20 @@
 
 ## このファイルの内容
 
+
+
 プログラム言語のツールのが動作する環境で構築できます。
 
-* Bluemix CLI コマンドライン
+* Bluemix CLI コマンド (bxコマンド)
+* kubectl k8sの管理用コマンド 
+* ruby,php,python,node.js をビルドするために必要なモジュール導入
+* clpplus を実行するために必要なJRE環境 (clpplusは入っていません)
 * ruby バージョン切り替えとビルドツール rbenv,ruby-build
 * PHP バージョン切り替えとビルドツール phpenv,php-build
 * Python バージョン切り替えツール pyenv
 * JavaScript バージョン切り替えとビルドツール ndenv,node-build
-* Docker-CE Docker実行環境
-* Xserver への接続 xeyesなど確認用アプリとライブラリ
+* Docker-CE Docker実行環境 (dockerコマンド)
+* Xserver への接続 xeyesなど確認用アプリとライブラリ 
 
 
 ## 前提条件
@@ -69,6 +74,7 @@ Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-125-generic x86_64)
 New release '16.04.2 LTS' available.
 Run 'do-release-upgrade' to upgrade to it.
 ~~~
+
 
 
 ## Bluemix へのログイン
@@ -263,6 +269,19 @@ v5.9.1
 ~~~
 
 
+## 停止と削除
+
+仮想マシンの停止で、ホスト・マシン(Mac or Windows)のメモリが解放されます。
+
+~~~
+vagrant halt
+~~~
+
+仮想マシンの削除で、ホスト・マシン(Mac or Windows)のディスクから仮想マシンのディスク・イメージが削除されます。
+
+~~~
+vagrant destroy
+~~~
 
 
 

@@ -72,6 +72,14 @@ apt-key fingerprint 0EBFCD88
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs) stable"
 apt-get update
 apt-get install -y docker-ce
+
+#
+# for Kubernetes CLI 
+#
+curl -s -O http://storage.googleapis.com/kubernetes-release/release/v1.5.6/bin/linux/amd64/kubectl
+mv kubectl /usr/local/bin
+chmod a+x /usr/local/bin/kubectl 
+
 #
 SHELL
 end
