@@ -109,17 +109,19 @@ vagrant@vagrant-ubuntu-trusty-64:~$ bx ic images
 ~~~
 
 
-## その他 Bluemixコマンドのプラグイン導入
+## その他プラグイン導入
 
-* bx plugin install container-service -r Bluemix
+その他のプラグインも導入しておくと便利です。
+
+#### bx plugin install container-service -r Bluemix
 
 Bluemix の Kubernetes クラスターを操作するためのプラグイン
 
-* bx plugin install container-registry -r Bluemix
+#### bx plugin install container-registry -r Bluemix
 
 レジストリーと、アカウント用のレジストリー・リソースを管理するためのプラグイン
 
-* bx plugin install IBM-Containers -r Bluemix
+#### bx plugin install IBM-Containers -r Bluemix
 
 IBM Bluemix Container Service (Docker) の管理のためのプラグイン
 
