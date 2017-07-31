@@ -1,6 +1,6 @@
 # bluemix-dev
 
-このVagrantfile は Bluemix のアプリを開発するための導入作業が完了した仮想マシンをVagrant のLinux上に作るものです。
+このVagrantfile は Bluemix のアプリを開発するための仮想マシンをVagrant のLinux上に作るものです。
 
 
 ## このファイルの内容
