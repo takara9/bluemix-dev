@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
   end
   config.vm.provision "shell", inline: <<-SHELL
 apt-get update
-apt-get install -y git X11-apps libxml2 libxml2-dev re2c libcurl3 libjpeg-dev icu-devtools libicu-dev libmcrypt-dev libtidy-dev libxslt1-dev libcurl4-openssl-dev libbz2-dev libpng12-dev g++ libreadline-dev autoconf ksh unzip default-jre libsqlite3-dev emacs24-nox
+apt-get install -y make build-essential git libssl-dev X11-apps libxml2 libxml2-dev re2c libcurl3 libjpeg-dev icu-devtools libicu-dev libmcrypt-dev libtidy-dev libxslt1-dev libcurl4-openssl-dev zlib1g-dev libbz2-dev libpng12-dev g++ libreadline-dev autoconf ksh unzip default-jre libsqlite3-dev emacs24-nox wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev
 
 # 
 su -l vagrant -c 'echo "# Program Language switch env" > ~/.bash_profile'
