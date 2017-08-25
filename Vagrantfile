@@ -66,6 +66,7 @@ su -l vagrant -c 'sudo ./download/Bluemix_CLI/install_bluemix_cli'
 #
 # for Docker and Bluemix CLI IC plugin
 #
+usermod -aG docker vagrant
 apt-get install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 apt-key fingerprint 0EBFCD88
