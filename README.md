@@ -87,7 +87,8 @@ vagrant@vagrant-ubuntu-trusty-64:~$ bx login -a api.ng.bluemix.net -u [your IBMi
 ## Bluemix コンテナサービスのプラグイン
 
 この Vagrantfile では Docker-CE を導入していますので、Bluemix CLI のプラグインをインストールするだけで、Bluemixのk8sコンテナを管理できます。
-重要: bx ic で利用するコンテナサービスは終了しました。
+
+**重要: bx ic で利用するコンテナサービスは終了しました。**
 
 
 ## 便利なBluemix CLI プラグイン
