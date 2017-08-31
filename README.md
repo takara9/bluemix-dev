@@ -81,40 +81,16 @@ Run 'do-release-upgrade' to upgrade to it.
 Bluemix CLIがインストールされるので、すぐに自分のアカウントでBluemixへログインできます。
 
 ~~~
-vagrant@vagrant-ubuntu-trusty-64:~$ bx login -a api.ng.bluemix.net -u takara@xxxxx.com -p '*******' -s dev -c account_id
+vagrant@vagrant-ubuntu-trusty-64:~$ bx login -a api.ng.bluemix.net -u [your IBMid] -p 'your password' -s dev
 ~~~
 
-## Bluemix IBMコンテナ (Docker) ログイン
+## Bluemix コンテナサービスのプラグイン
 
-この Vagrantfile では Docker-CE を導入していますので、Bluemix CLI のプラグインをインストールするだけで、BluemixのDocker コンテナを管理できます。
-
-~~~
-bx plugin install IBM-Containers -r Bluemix
-~~~
-確認のために、プラグインのリストを表示します。
-
-~~~
-vagrant@vagrant-ubuntu-trusty-64:~$ bx plugin list
-Listing installed plug-ins...
-
-Plugin Name      Version   
-IBM-Containers   1.0.1028
-~~~
-
-Bluemix の IBM Container (Docker)と接続します。
-
-~~~
-vagrant@vagrant-ubuntu-trusty-64:~$ bx ic init
-~~~
-
-Bluemix のコンテナイメージのリストを表示できます。
-
-~~~
-vagrant@vagrant-ubuntu-trusty-64:~$ bx ic images
-~~~
+この Vagrantfile では Docker-CE を導入していますので、Bluemix CLI のプラグインをインストールするだけで、Bluemixのk8sコンテナを管理できます。
+重要: bx ic で利用するコンテナサービスは終了しました。
 
 
-## その他プラグイン導入
+## 便利なBluemix CLI プラグイン
 
 その他のプラグインも導入しておくと便利です。
 
@@ -126,10 +102,6 @@ Bluemix の Kubernetes クラスターを操作するためのプラグイン
 
 レジストリーと、アカウント用のレジストリー・リソースを管理するためのプラグイン
 
-#### bx plugin install IBM-Containers -r Bluemix
-
-IBM Bluemix Container Service (Docker) の管理のためのプラグイン
-
 上記のプラグインをインストールした後に、リストを表示すると次の様になります。
 
 ~~~
@@ -137,7 +109,6 @@ vagrant@vagrant-ubuntu-trusty-64:~$ bx plugin list
 Listing installed plug-ins...
 
 Plugin Name          Version   
-IBM-Containers       1.0.1028   
 container-registry   0.1.171   
 container-service    0.1.292
 ~~~
