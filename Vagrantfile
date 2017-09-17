@@ -6,6 +6,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "public_network", ip: "192.168.1.88", bridge: "en0: Ethernet"
   config.vm.network :forwarded_port, host: 3000, guest: 3000
   config.vm.network :forwarded_port, host: 8001, guest: 8001
+  config.vm.network :forwarded_port, host: 4040, guest: 4040
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "1024"
   end
@@ -75,6 +76,12 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $
 apt-get update
 apt-get install -y docker-ce
 usermod -aG docker vagrant
+
+#
+# for docker-compose
+#
+curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+chmod a+x /usr/local/bin/docker-compose 
 
 #
 # for Kubernetes CLI 
