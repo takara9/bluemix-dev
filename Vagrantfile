@@ -87,7 +87,9 @@ chmod a+x /usr/local/bin/docker-compose
 #
 # for Kubernetes CLI 
 #
-curl -s -O http://storage.googleapis.com/kubernetes-release/release/v1.5.6/bin/linux/amd64/kubectl
+#curl -s -O http://storage.googleapis.com/kubernetes-release/release/v1.5.6/bin/linux/amd64/kubectl
+curl -s -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+
 mv kubectl /usr/local/bin
 chmod a+x /usr/local/bin/kubectl 
 
