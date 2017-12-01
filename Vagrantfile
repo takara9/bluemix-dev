@@ -7,6 +7,8 @@ Vagrant.configure("2") do |config|
   config.vm.network :forwarded_port, host: 3000, guest: 3000
   config.vm.network :forwarded_port, host: 8001, guest: 8001
   config.vm.network :forwarded_port, host: 4040, guest: 4040
+  #config.vm.synced_folder "/Users/maho/Documents/vagrant-fs", "/home/vagrant/share"
+  #config.vm.synced_folder "/Users/maho/Vagrant/vagrant-fs", "/home/vagrant/share"
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "1024"
   end
