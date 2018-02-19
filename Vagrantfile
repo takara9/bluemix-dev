@@ -64,9 +64,12 @@ su -l vagrant -c 'exec $SHELL -l'
 # Install Bluemix CLI
 #
 su -l vagrant -c 'mkdir download'
-su -l vagrant -c 'cd download;curl -s -O https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_0.5.5_amd64.tar.gz'
-su -l vagrant -c 'cd download;tar xzvf Bluemix_CLI_0.5.5_amd64.tar.gz'
+#su -l vagrant -c 'cd download;curl -s -O https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/Bluemix_CLI_0.5.5_amd64.tar.gz'
+su -l vagrant -c 'cd download;curl -s -O https://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-cli/latest/IBM_Cloud_CLI_amd64.tar.gz'
+#su -l vagrant -c 'cd download;tar xzvf Bluemix_CLI_0.5.5_amd64.tar.gz'
+su -l vagrant -c 'cd download;tar xzvf IBM_Cloud_CLI_amd64.tar.gz'
 su -l vagrant -c 'sudo ./download/Bluemix_CLI/install_bluemix_cli'
+
 
 #
 # for Docker and Bluemix CLI IC plugin
